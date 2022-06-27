@@ -2,7 +2,6 @@ package com.edw.controller;
 
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
-import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,6 +25,7 @@ import static org.hamcrest.CoreMatchers.*;
  * @author Muhammad Edwin < edwin at redhat dot com >
  * 27 Jun 2022 10:50
  */
+@DisplayName("03. Controller Check")
 @ExtendWith(SpringExtension.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -40,8 +40,8 @@ public class ApiControllerTest {
     }
 
     @Test
-    @DisplayName("Testing a successful rest api with a random name")
-    public void testSuccessRequest() {
+    @DisplayName("01. Testing a successful rest api with a random name")
+    public void test_SuccessRequest() {
 
         String randomName = UUID.randomUUID().toString();
 

@@ -12,17 +12,18 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @author Muhammad Edwin < edwin at redhat dot com >
  * 27 Jun 2022 11:10
  */
-@SpringBootTest
+@DisplayName("01. Sanity Check")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ApplicationTest {
 
     @Test
-    @DisplayName("Testing the context load")
-    public void contextLoads() {
+    @DisplayName("01. Testing the context load")
+    public void test_contextLoads() {
     }
 
     @Test
-    @DisplayName("Testing the main class")
-    public void main() {
+    @DisplayName("02. Testing the main class")
+    public void test_main() {
         Application.main(new String[] {});
     }
 
